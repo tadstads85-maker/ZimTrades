@@ -1,0 +1,22 @@
+{
+  "name": "zimtrades-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0",
+    "pnpm": "^8.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter @zimtrades/web dev",
+    "dev:api": "pnpm --filter @zimtrades/api start:dev",
+    "dev": "pnpm -w -r dev",
+    "build": "pnpm -w -r build",
+    "lint": "pnpm -w -r lint"
+  }
+}
